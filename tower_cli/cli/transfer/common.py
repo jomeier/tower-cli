@@ -313,6 +313,8 @@ def process_inventory_groups(group_json):
     map_node_to_post_options(group_post_options, group_json, group_to_return)
     name_to_id_map = {}
 
+    group_to_return['name'] = group_json['name']
+
     # Now we need to get the children for the group (which should all be groups)
     if 'related' in group_json and 'children' in group_json['related']:
         group_to_return['sub_groups'] = []
