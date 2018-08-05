@@ -48,6 +48,42 @@ API_POST_OPTIONS = {
             "required": False,
             "default": {}
         }
+    },
+    'user': {
+        "username": {
+            "required": True
+        },
+        "email": {
+            "required": True,
+            "default": ""
+        },
+        "is_superuser": {
+            "required": False,
+            "default": False
+        },
+        "is_system_auditor": {
+            "required": False,
+            "default": False
+        },
+        "first_name": {
+            "required": True,
+            "default": ""
+        },
+        "last_name": {
+            "required": True,
+            "default": ""
+        },
+        "ldap_dn": {
+            "required": False,
+            "default": ""
+        },
+        "auth": {
+            "required": False,
+            "default": []
+        },
+        "external_account": {
+            "required": False
+        }
     }
 }
 NOTIFICATION_TYPES = ['notification_templates_error', 'notification_templates_success']
